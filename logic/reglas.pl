@@ -1,16 +1,8 @@
-%==============================================
-% Base de conocimiento
-%==============================================
-
 :- dynamic estudiante/3.
 
 % estudiante(Nombre, Promedio, Asistencia).
 
-
-
-%==============================================
 % Reglas de inferencia
-%==============================================
 
 aprobado(Nombre):-
     estudiante(Nombre,Promedio,_),
