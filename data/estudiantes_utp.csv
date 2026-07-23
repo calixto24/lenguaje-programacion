@@ -1,0 +1,16 @@
+codigo,nombre,carrera,ciclo,creditos_matriculados,promedio_ciclo_anterior,asistencia,distrito,edad,sexo
+U23220101,Ana Torres,Ingeniería de Sistemas,5,22,18.8,95,Ate,20,F
+U23220102,Carlos Rojas,Ingeniería Industrial,6,20,15.2,88,Santa Anita,22,M
+U23220103,María López,Administración,4,21,14.8,85,El Agustino,19,F
+U23220104,José Pérez,Contabilidad,7,18,16.7,90,San Juan de Lurigancho,23,M
+U23220105,Lucía Sánchez,Derecho,5,22,12.5,82,La Molina,21,F
+U23220106,Diego Vargas,Ingeniería Civil,8,21,17.4,91,Ate,24,M
+U23220107,Valeria Castro,Psicología,3,20,15.9,87,Chaclacayo,19,F
+U23220108,Miguel Flores,Arquitectura,6,22,13.4,84,Lurigancho,22,M
+U23220109,Sofía Ruiz,Marketing,5,19,16.2,89,San Luis,20,F
+U23220110,Luis Medina,Ingeniería Industrial,4,18,14.1,83,Ate,20,M
+U23220111,Camila Ramos,Ingeniería de Sistemas,7,21,17.9,92,Santa Anita,23,F
+U23220112,Andrés Salazar,Administración,6,20,13.7,81,El Agustino,22,M
+U23220113,Daniela León,Derecho,5,22,18.1,94,La Molina,21,F
+U23220114,Sebastián Ortiz,Contabilidad,8,19,15.6,86,San Juan de Lurigancho,24,M
+U23220115,Fernanda Vega,Ingeniería Civil,4,20,16.8,90,Ate,20,F

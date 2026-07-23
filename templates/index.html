@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,61 @@
     }
   </style>
 </head>
+
 <body>
-  <div class="card">
+
+  <div class="container">
     <h1>{{ titulo }}</h1>
-    <p><strong>Estudiante:</strong> {{ estudiante_nombre }} </p>
-    <p><strong>Promedio:</strong> {{ promedio }} </p>
-    <p><strong>Resultado Beca:</strong> {{ porcentaje_beca }} </p>
-    <p><strong>Observacion:</strong> {{ observacion }} </p>
+
+    <!-- Panel de Métricas -->
+    <div>
+      <div>
+        <h3>Promedio Academico</h3>
+        <p>{{ metricas.promedio_academico_general }}</p>
+      </div>
+      <div>
+        <h3>Becas Aprobadas</h3>
+        <p>{{ metricas.total_becas_aprobadas }}</p>
+      </div>
+      <div>
+        <h3>Tasa de Aprobación</h3>
+        <p>{{ metricas.tasa_aprobacion_pct }}%</p>
+      </div>
+    </div>
+
+    <!-- Tabla con Resultados de Evaluación -->
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Carrera</th>
+            <th>Promedio</th>
+            <th>Resultado de Beca</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for est in resultados %}
+          <tr>
+            <td><strong>{{ est.codigo }}</strong></td>
+            <td>{{ est.nombre }}</td>
+            <td>{{ est.carrera }}</td>
+            <td>{{ est.promedio }}</td>
+            <td>
+              {% if est.beca != 'No Elegible' %}
+              <span>{{ est.beca }}</span>
+              {% else %}
+              <span>{{ est.beca }}</span>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
+
 </body>
+
 </html>
