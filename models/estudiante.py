@@ -1,63 +1,51 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 @dataclass
 class Estudiante:
     codigo: str
     nombre: str
+    sexo: str
+    edad: int
     carrera: str
     ciclo: int
-    edad: int
-    genero: str
-
-    nota1: float
-    nota2: float
-    nota3: float
-    nota4: float
-
+    promedio: float
     asistencia: int
+    ingreso_familiar: float
+    dependientes: int
+    trabaja: bool
+    tipo_colegio: str
+    discapacidad: bool
+    orfandad: bool
+    departamento: str
+    provincia: str
+    zona: str
 
-    promedio: float = field(init=False)
-
-    def __post_init__(self):
-        self.promedio = self.calcular_promedio()
-
-    def calcular_promedio(self) -> float:
-        return round(
-            (self.nota1 + self.nota2 + self.nota3 + self.nota4) / 4,
-            2
-        )
-
-    def aprobo(self) -> bool:
-        return self.promedio >= 11
-
-    def obtener_notas(self) -> list:
-        return [
-            self.nota1,
-            self.nota2,
-            self.nota3,
-            self.nota4
-        ]
-
-    def to_dict(self) -> dict:
+    def to_dict(self):
         return {
             "codigo": self.codigo,
             "nombre": self.nombre,
+            "sexo": self.sexo,
+            "edad": self.edad,
             "carrera": self.carrera,
             "ciclo": self.ciclo,
-            "edad": self.edad,
-            "genero": self.genero,
-            "nota1": self.nota1,
-            "nota2": self.nota2,
-            "nota3": self.nota3,
-            "nota4": self.nota4,
             "promedio": self.promedio,
-            "asistencia": self.asistencia
+            "asistencia": self.asistencia,
+            "ingreso_familiar": self.ingreso_familiar,
+            "dependientes": self.dependientes,
+            "trabaja": self.trabaja,
+            "tipo_colegio": self.tipo_colegio,
+            "discapacidad": self.discapacidad,
+            "orfandad": self.orfandad,
+            "departamento": self.departamento,
+            "provincia": self.provincia,
+            "zona": self.zona
         }
 
     def __str__(self):
+
         return (
             f"{self.codigo} | "
             f"{self.nombre} | "
             f"Promedio: {self.promedio} | "
-            f"Asistencia: {self.asistencia}%"
+            f"Ingreso: S/. {self.ingreso_familiar:.2f}"
         )

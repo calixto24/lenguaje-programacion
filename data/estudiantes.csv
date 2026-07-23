@@ -1,21 +1,31 @@
-codigo,nombre,carrera,ciclo,edad,genero,nota1,nota2,nota3,nota4,asistencia
-2025001,Ana Torres,Ingeniería de Sistemas,3,20,F,18,17,19,18,96
-2025002,Carlos Rojas,Ingeniería Industrial,2,19,M,12,13,11,14,78
-2025003,María López,Ingeniería de Sistemas,4,21,F,9,10,8,11,65
-2025004,José Pérez,Administración,5,22,M,15,14,16,15,88
-2025005,Lucía Sánchez,Contabilidad,1,18,F,19,20,18,19,99
-2025006,Pedro Castillo,Derecho,6,23,M,10,12,9,11,70
-2025007,Valeria Ramos,Ingeniería Civil,3,20,F,16,17,15,16,91
-2025008,Miguel Díaz,Ingeniería Industrial,2,19,M,13,12,14,13,82
-2025009,Sofía Herrera,Psicología,4,21,F,20,19,20,20,100
-2025010,Diego Fernández,Ingeniería de Sistemas,5,22,M,11,10,12,13,75
-2025011,Camila Ruiz,Contabilidad,2,19,F,17,18,16,17,93
-2025012,Luis Mendoza,Derecho,1,18,M,8,9,10,9,60
-2025013,Fernanda Castro,Administración,6,23,F,14,15,13,14,84
-2025014,Jorge Salas,Ingeniería Civil,7,24,M,18,17,18,19,95
-2025015,Andrea Flores,Ingeniería de Sistemas,3,20,F,15,16,15,16,89
-2025016,Ricardo Vega,Psicología,2,19,M,12,11,13,12,76
-2025017,Paola Medina,Ingeniería Industrial,5,22,F,19,18,20,19,98
-2025018,Hugo Navarro,Administración,4,21,M,10,11,10,9,68
-2025019,Daniela Cruz,Contabilidad,6,23,F,16,15,17,16,92
-2025020,Kevin Morales,Ingeniería de Sistemas,1,18,M,7,8,9,8,55
+codigo,nombre,sexo,edad,carrera,ciclo,promedio,asistencia,ingreso_familiar,dependientes,trabaja,tipo_colegio,discapacidad,orfandad,departamento,provincia,zona
+2025001,Ana Torres,F,20,Ingeniería de Sistemas,3,18.7,96,850,4,No,Publico,No,No,Lima,Lima,Urbana
+2025002,Carlos Rojas,M,22,Ingeniería Industrial,5,16.5,92,1400,2,Si,Privado,No,No,Lima,Lima,Urbana
+2025003,María López,F,19,Psicología,2,19.2,98,700,5,No,Publico,No,Si,Junín,Huancayo,Rural
+2025004,José Pérez,M,21,Derecho,4,14.8,87,2100,1,Si,Privado,No,No,Arequipa,Arequipa,Urbana
+2025005,Lucía Sánchez,F,23,Contabilidad,7,17.9,95,950,3,Si,Publico,No,No,Cusco,Cusco,Urbana
+2025006,Pedro Castillo,M,20,Ingeniería Civil,3,12.4,82,1800,2,No,Publico,No,No,Piura,Piura,Urbana
+2025007,Sofía Herrera,F,18,Ingeniería de Sistemas,1,19.6,99,600,6,No,Publico,No,Si,Ayacucho,Huamanga,Rural
+2025008,Diego Fernández,M,22,Administración,6,15.3,90,2400,2,Si,Privado,No,No,Lambayeque,Chiclayo,Urbana
+2025009,Camila Ruiz,F,21,Contabilidad,5,18.1,94,1000,3,No,Publico,Si,No,Lima,Lima,Urbana
+2025010,Luis Mendoza,M,19,Ingeniería Industrial,2,13.5,84,1700,4,No,Publico,No,No,Cajamarca,Cajamarca,Rural
+2025011,Valeria Ramos,F,22,Ingeniería Civil,6,17.0,96,1100,2,Si,Publico,No,No,Arequipa,Arequipa,Urbana
+2025012,Jorge Salas,M,24,Derecho,8,11.8,79,2800,1,Si,Privado,No,No,Lima,Lima,Urbana
+2025013,Fernanda Castro,F,20,Psicología,3,18.4,97,900,5,No,Publico,No,No,Cusco,Cusco,Rural
+2025014,Ricardo Vega,M,21,Ingeniería de Sistemas,4,16.8,91,1300,2,Si,Privado,No,No,Lima,Lima,Urbana
+2025015,Daniela Cruz,F,23,Administración,7,19.5,98,750,4,No,Publico,No,Si,Puno,Puno,Rural
+2025016,Hugo Navarro,M,20,Contabilidad,3,14.2,85,1600,3,Si,Publico,No,No,Ica,Ica,Urbana
+2025017,Paola Medina,F,22,Ingeniería Industrial,6,17.8,95,950,4,No,Publico,No,No,La Libertad,Trujillo,Urbana
+2025018,Kevin Morales,M,18,Ingeniería Civil,1,10.7,72,1200,5,No,Publico,No,No,Huánuco,Huánuco,Rural
+2025019,Andrea Flores,F,19,Derecho,2,18.9,99,680,6,No,Publico,No,No,Apurímac,Abancay,Rural
+2025020,Miguel Díaz,M,23,Ingeniería de Sistemas,8,15.9,89,2200,2,Si,Privado,No,No,Lima,Lima,Urbana
+2025021,Rosa Gutiérrez,F,21,Contabilidad,5,17.4,96,980,3,No,Publico,No,No,Junín,Huancayo,Urbana
+2025022,Juan Herrera,M,20,Administración,4,12.1,81,2600,2,Si,Privado,No,No,Lima,Lima,Urbana
+2025023,Elena Vargas,F,22,Ingeniería Civil,6,19.1,97,870,4,No,Publico,Si,No,Cusco,Cusco,Rural
+2025024,David Ramos,M,19,Psicología,2,13.8,86,1450,3,No,Publico,No,No,Piura,Piura,Urbana
+2025025,Gabriela León,F,23,Ingeniería Industrial,8,18.3,95,920,2,Si,Publico,No,No,Arequipa,Arequipa,Urbana
+2025026,Cristian Ortiz,M,21,Derecho,5,11.4,77,2500,1,Si,Privado,No,No,Lima,Lima,Urbana
+2025027,Natalia Paredes,F,20,Ingeniería de Sistemas,3,17.6,94,1050,3,No,Publico,No,No,Ayacucho,Huamanga,Rural
+2025028,Marco Silva,M,22,Contabilidad,7,15.1,88,1750,2,Si,Privado,No,No,Ica,Ica,Urbana
+2025029,Patricia Núñez,F,18,Administración,1,19.8,100,650,5,No,Publico,No,Si,Cajamarca,Cajamarca,Rural
+2025030,Alex Romero,M,21,Ingeniería Civil,4,16.2,90,1350,3,Si,Publico,No,No,Lambayeque,Chiclayo,Urbana

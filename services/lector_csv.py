@@ -3,24 +3,35 @@ import pandas as pd
 from models.estudiante import Estudiante
 
 class LectorCSV:
+
     COLUMNAS_OBLIGATORIAS = [
         "codigo",
         "nombre",
+        "sexo",
+        "edad",
         "carrera",
         "ciclo",
-        "edad",
-        "genero",
-        "nota1",
-        "nota2",
-        "nota3",
-        "nota4",
-        "asistencia"
+        "promedio",
+        "asistencia",
+        "ingreso_familiar",
+        "dependientes",
+        "trabaja",
+        "tipo_colegio",
+        "discapacidad",
+        "orfandad",
+        "departamento",
+        "provincia",
+        "zona"
     ]
+
+    @staticmethod
+    def texto_a_bool(valor: str) -> bool:
+        return str(valor).strip().lower() == "si"
 
     @staticmethod
     def leer_estudiantes(ruta_csv: str) -> list[Estudiante]:
 
-        ruta = Path( ruta_csv )
+        ruta = Path(ruta_csv)
 
         if not ruta.exists():
             raise FileNotFoundError(
@@ -47,15 +58,25 @@ class LectorCSV:
             estudiante = Estudiante(
                 codigo=str(fila["codigo"]),
                 nombre=fila["nombre"],
+                sexo=fila["sexo"],
+                edad=int(fila["edad"]),
+
                 carrera=fila["carrera"],
                 ciclo=int(fila["ciclo"]),
-                edad=int(fila["edad"]),
-                genero=fila["genero"],
-                nota1=float(fila["nota1"]),
-                nota2=float(fila["nota2"]),
-                nota3=float(fila["nota3"]),
-                nota4=float(fila["nota4"]),
-                asistencia=int(fila["asistencia"])
+                promedio=float(fila["promedio"]),
+                asistencia=int(fila["asistencia"]),
+
+                ingreso_familiar=float(fila["ingreso_familiar"]),
+                dependientes=int(fila["dependientes"]),
+                trabaja=LectorCSV.texto_a_bool(fila["trabaja"]),
+
+                tipo_colegio=fila["tipo_colegio"],
+                discapacidad=LectorCSV.texto_a_bool(fila["discapacidad"]),
+                orfandad=LectorCSV.texto_a_bool(fila["orfandad"]),
+
+                departamento=fila["departamento"],
+                provincia=fila["provincia"],
+                zona=fila["zona"]
             )
 
             estudiantes.append(estudiante)
