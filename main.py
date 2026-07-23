@@ -1,18 +1,23 @@
-from services.lector_csv import LectorCSV
-from services.analisis import AnalizadorAcademico
-from services.funcional import FuncionalAcademico
-from services.prolog_service import PrologService
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 
+app = FastAPI()
 
-def main():
+templates = Jinja2Templates(directory="templates")
 
-    print("=" * 60)
-    print(" SISTEMA DE ANÁLISIS DE RENDIMIENTO ACADÉMICO ")
-    print("=" * 60)
+@app.get('/', response_class=HTMLResponse)
+async def index(request: Request):
+    students = {
+        "titulo": "Resultado de Evaluación de Beca",
+        "estudiante_nombre": "Carlos Mendoza",
+        "promedio": 17.5,
+        "porcentaje_beca": 100,
+        "observacion": "Aprobado por excelente rendimiento y vulnerabilidad alta."
+    }
 
-    # Leer CSV
-    estudiantes = LectorCSV.leer_estudiantes(
-        "data/estudiantes.csv"
+    return templates.TemplateResponse(
+        request=request,
+        name='index.html',
+        context=students,
     )
-
-    print(f"\nSe cargaron {len(estudiantes)} estudiantes.\n")
