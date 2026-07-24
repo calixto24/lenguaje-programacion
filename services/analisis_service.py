@@ -34,11 +34,19 @@ class AnalisisService:
         }
 
     @staticmethod
-    def obtener_distribucion_becas(resultados_prolog: list[dict]) -> dict[str, int]:
-        tipos_beca = [r["beca"] for r in resultados_prolog]
-        becas_unicas, conteos = np.unique(tipos_beca, return_counts=True)
-        
-        return dict(zip(becas_unicas, map(int, conteos)))
+    def obtener_distribucion_becas(resultados_prolog):
+
+        tipos = [r["beca"] for r in resultados_prolog]
+
+        labels, valores = np.unique(
+            tipos,
+            return_counts=True
+        )
+
+        return {
+            "labels": labels.tolist(),
+            "series": valores.astype(int).tolist()
+        }
 
     @staticmethod
     def obtener_distribucion_por_distrito(expedientes: list[Expediente], resultados_prolog: list[dict]) -> dict:
