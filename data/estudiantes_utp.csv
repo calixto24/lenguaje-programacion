@@ -2,100 +2,100 @@ codigo,nombre,carrera,ciclo,creditos_matriculados,promedio_ciclo_anterior,asiste
 U23220101,Ana Torres,Ingeniería de Sistemas,5,22,18.8,95,Ate,20,F
 U23220102,Carlos Rojas,Ingeniería Industrial,6,20,15.2,88,Santa Anita,22,M
 U23220103,María López,Administración,4,21,14.8,85,El Agustino,19,F
-U23220104,José Pérez,Contabilidad,7,18,16.7,90,San Juan de Lurigancho,23,M
+U23220104,José Pérez,Contabilidad,7,18,16.7,90,La Molina,23,M
 U23220105,Lucía Sánchez,Derecho,5,22,12.5,82,La Molina,21,F
 U23220106,Diego Vargas,Ingeniería Civil,8,21,17.4,91,Ate,24,M
 U23220107,Valeria Castro,Psicología,3,20,15.9,87,Chaclacayo,19,F
-U23220108,Miguel Flores,Arquitectura,6,22,13.4,84,Lurigancho,22,M
-U23220109,Sofía Ruiz,Marketing,5,19,16.2,89,San Luis,20,F
+U23220108,Miguel Flores,Arquitectura,6,22,13.4,84,Lurigancho-Chosica,22,M
+U23220109,Sofía Ruiz,Marketing,5,19,16.2,89,La Molina,20,F
 U23220110,Luis Medina,Ingeniería Industrial,4,18,14.1,83,Ate,20,M
 U23220111,Camila Ramos,Ingeniería de Sistemas,7,21,17.9,92,Santa Anita,23,F
 U23220112,Andrés Salazar,Administración,6,20,13.7,81,El Agustino,22,M
 U23220113,Daniela León,Derecho,5,22,18.1,94,La Molina,21,F
-U23220114,Sebastián Ortiz,Contabilidad,8,19,15.6,86,San Juan de Lurigancho,24,M
+U23220114,Sebastián Ortiz,Contabilidad,8,19,15.6,86,Santa Anita,24,M
 U23220115,Fernanda Vega,Ingeniería Civil,4,20,16.8,90,Ate,20,F
-U23220116,Sofía Sánchez,Derecho,2,18,11.6,99,Lurigancho,19,F
-U23220117,Kevin Cruz,Arquitectura,5,21,19.4,84,Rímac,22,M
+U23220116,Sofía Sánchez,Derecho,2,18,11.6,99,Lurigancho-Chosica,19,F
+U23220117,Kevin Cruz,Arquitectura,5,21,19.4,84,Chaclacayo,22,M
 U23220118,Carolina Castro,Contabilidad,5,22,11.2,82,El Agustino,22,F
 U23220119,Ana Ortiz,Arquitectura,10,20,13.1,82,La Molina,28,F
-U23220120,Diego Chávez,Contabilidad,5,22,15.8,100,San Juan de Lurigancho,23,M
+U23220120,Diego Chávez,Contabilidad,5,22,15.8,100,Santa Anita,23,M
 U23220121,Kiara Flores,Administración,5,18,11.1,80,La Molina,23,F
-U23220122,Miguel Vega,Derecho,7,19,15.0,90,San Luis,24,M
-U23220123,Melany Ortiz,Ingeniería Civil,10,19,10.7,82,Breña,27,F
+U23220122,Miguel Vega,Derecho,7,19,15.0,90,Santa Anita,24,M
+U23220123,Melany Ortiz,Ingeniería Civil,10,19,10.7,82,Santa Anita,27,F
 U23220124,Fernando Rojas,Administración,8,21,16.4,83,El Agustino,26,M
 U23220125,Diego García,Ingeniería Civil,7,19,13.4,78,El Agustino,25,M
 U23220126,Jorge García,Derecho,7,21,10.8,77,Chaclacayo,25,M
-U23220127,Miguel Díaz,Psicología,9,16,16.4,92,San Luis,27,M
+U23220127,Miguel Díaz,Psicología,9,16,16.4,92,Santa Anita,27,M
 U23220128,Daniela Mendoza,Ingeniería Civil,10,20,16.1,99,Ate,27,F
-U23220129,Javier Sánchez,Derecho,8,22,14.9,75,Breña,25,M
-U23220130,Gabriela Espinoza,Ingeniería de Sistemas,9,20,11.3,78,San Luis,26,F
-U23220131,Ximena Cruz,Derecho,9,22,13.0,90,San Luis,26,F
+U23220129,Javier Sánchez,Derecho,8,22,14.9,75,Huaycán,25,M
+U23220130,Gabriela Espinoza,Ingeniería de Sistemas,9,20,11.3,78,Ate,26,F
+U23220131,Ximena Cruz,Derecho,9,22,13.0,90,El Agustino,26,F
 U23220132,Javier Sánchez,Psicología,4,21,15.1,79,Santa Anita,22,M
-U23220133,Rodrigo Cruz,Marketing,5,16,13.0,84,Rímac,23,M
-U23220134,Patricia Espinoza,Arquitectura,6,19,15.5,92,Lurigancho,24,F
-U23220135,Fabricio Castro,Contabilidad,10,20,12.6,99,Lurigancho,27,M
+U23220133,Rodrigo Cruz,Marketing,5,16,13.0,84,Lurigancho-Chosica,23,M
+U23220134,Patricia Espinoza,Arquitectura,6,19,15.5,92,Lurigancho-Chosica,24,F
+U23220135,Fabricio Castro,Contabilidad,10,20,12.6,99,Lurigancho-Chosica,27,M
 U23220136,Álvaro García,Psicología,7,22,17.6,95,El Agustino,25,M
 U23220137,Sofía Mendoza,Ingeniería Civil,2,20,11.4,89,Ate,19,F
 U23220138,Fabricio Gutiérrez,Administración,2,20,17.5,83,Chaclacayo,20,M
-U23220139,Lesly Ramos,Marketing,7,19,16.1,99,San Luis,24,F
-U23220140,Fernanda Gutiérrez,Derecho,4,22,11.3,78,Breña,21,F
+U23220139,Lesly Ramos,Marketing,7,19,16.1,99,La Molina,24,F
+U23220140,Fernanda Gutiérrez,Derecho,4,22,11.3,78,Chaclacayo,21,F
 U23220141,Andrés Alvarez,Derecho,1,16,13.4,76,La Molina,19,M
 U23220142,Christian Sánchez,Contabilidad,9,20,15.6,100,El Agustino,26,M
 U23220143,Lucía Quispe,Psicología,10,22,12.7,93,El Agustino,27,F
-U23220144,Alex Ruiz,Arquitectura,5,22,10.6,100,San Luis,23,M
+U23220144,Alex Ruiz,Arquitectura,5,22,10.6,100,Lurigancho-Chosica,23,M
 U23220145,Lucía Vega,Ingeniería Civil,10,19,16.3,88,La Molina,28,F
-U23220146,Sebastián León,Arquitectura,2,18,13.9,86,Rímac,20,M
+U23220146,Sebastián León,Arquitectura,2,18,13.9,86,Lurigancho-Chosica,20,M
 U23220147,Carlos Herrera,Psicología,5,16,15.6,96,Ate,23,M
-U23220148,Piero Morales,Contabilidad,10,19,12.5,81,Rímac,28,M
+U23220148,Piero Morales,Contabilidad,10,19,12.5,81,Chaclacayo,28,M
 U23220149,Rocío Pérez,Ingeniería de Sistemas,5,20,10.8,86,El Agustino,22,F
 U23220150,Rodrigo Romero,Psicología,3,18,11.7,92,Chaclacayo,21,M
 U23220151,Andrea Cruz,Arquitectura,5,22,18.3,100,Santa Anita,23,F
-U23220152,Sofía Díaz,Contabilidad,7,21,13.8,100,Lurigancho,24,F
-U23220153,Javier Pérez,Arquitectura,6,22,17.2,83,Rímac,24,M
+U23220152,Sofía Díaz,Contabilidad,7,21,13.8,100,Lurigancho-Chosica,24,F
+U23220153,Javier Pérez,Arquitectura,6,22,17.2,83,Ate,24,M
 U23220154,Miguel Chávez,Contabilidad,8,16,16.1,92,Chaclacayo,25,M
 U23220155,Rocío Herrera,Arquitectura,5,22,14.2,79,Ate,22,F
 U23220156,Bryan Pérez,Ingeniería Industrial,4,21,11.7,89,Chaclacayo,22,M
 U23220157,Melany Ortiz,Ingeniería Industrial,8,21,14.2,83,Ate,26,F
-U23220158,Patricia Vega,Contabilidad,6,16,19.3,86,Lima,24,F
-U23220159,Natalia Ruiz,Contabilidad,2,20,11.3,81,Breña,19,F
-U23220160,Brenda Ramos,Contabilidad,3,21,12.3,99,Lima,20,F
+U23220158,Patricia Vega,Contabilidad,6,16,19.3,86,Chaclacayo,24,F
+U23220159,Natalia Ruiz,Contabilidad,2,20,11.3,81,La Molina,19,F
+U23220160,Brenda Ramos,Contabilidad,3,21,12.3,99,Santa Anita,20,F
 U23220161,Stephany Guerrero,Contabilidad,6,18,17.6,94,Ate,24,F
 U23220162,Sofía Espinoza,Derecho,3,16,16.4,75,El Agustino,20,F
 U23220163,Gabriel Morales,Contabilidad,10,19,10.6,83,Ate,27,M
-U23220164,Anthony Pérez,Ingeniería Industrial,8,20,17.5,91,Rímac,25,M
+U23220164,Anthony Pérez,Ingeniería Industrial,8,20,17.5,91,La Molina,25,M
 U23220165,Anthony Flores,Ingeniería de Sistemas,9,19,14.6,75,Ate,27,M
 U23220166,Christian Chávez,Ingeniería Industrial,8,22,18.7,77,Santa Anita,26,M
 U23220167,Lucía Sánchez,Derecho,10,22,15.8,97,Chaclacayo,28,F
-U23220168,Kevin Mendoza,Psicología,2,22,11.5,95,Breña,19,M
-U23220169,Kevin Ríos,Contabilidad,7,19,17.9,87,Lurigancho,24,M
+U23220168,Kevin Mendoza,Psicología,2,22,11.5,95,Lurigancho-Chosica,19,M
+U23220169,Kevin Ríos,Contabilidad,7,19,17.9,87,Lurigancho-Chosica,24,M
 U23220170,Christian Ramos,Derecho,6,18,16.7,90,Santa Anita,23,M
-U23220171,Lucía Ortiz,Ingeniería Industrial,6,18,15.5,93,Lima,24,F
+U23220171,Lucía Ortiz,Ingeniería Industrial,6,18,15.5,93,Chaclacayo,24,F
 U23220172,Lorena Salazar,Psicología,1,19,15.9,86,Santa Anita,18,F
 U23220173,Estefani García,Contabilidad,2,19,18.1,86,Santa Anita,20,F
 U23220174,Brenda Ortiz,Marketing,10,21,16.6,92,Ate,28,F
-U23220175,Camila Ruiz,Derecho,6,19,10.6,79,Rímac,24,F
-U23220176,Sofía Romero,Ingeniería de Sistemas,2,22,15.3,87,Lurigancho,20,F
+U23220175,Camila Ruiz,Derecho,6,19,10.6,79,Chaclacayo,24,F
+U23220176,Sofía Romero,Ingeniería de Sistemas,2,22,15.3,87,Lurigancho-Chosica,20,F
 U23220177,Andrés Salazar,Derecho,6,21,15.9,76,El Agustino,23,M
-U23220178,Estefani López,Derecho,8,22,14.3,94,San Luis,26,F
-U23220179,Sebastián Díaz,Marketing,2,19,14.4,84,Breña,20,M
-U23220180,José Flores,Psicología,10,16,10.6,84,San Juan de Lurigancho,27,M
+U23220178,Estefani López,Derecho,8,22,14.3,94,Santa Anita,26,F
+U23220179,Sebastián Díaz,Marketing,2,19,14.4,84,Huaycán,20,M
+U23220180,José Flores,Psicología,10,16,10.6,84,Huaycán,27,M
 U23220181,Mateo Ramos,Ingeniería Industrial,1,20,17.2,80,El Agustino,19,M
-U23220182,Fiorella Espinoza,Ingeniería Civil,2,20,18.3,76,Lurigancho,19,F
-U23220183,Jhon López,Ingeniería Civil,10,20,15.7,97,Breña,28,M
-U23220184,Miguel León,Ingeniería de Sistemas,6,18,17.7,94,San Luis,24,M
+U23220182,Fiorella Espinoza,Ingeniería Civil,2,20,18.3,76,Lurigancho-Chosica,19,F
+U23220183,Jhon López,Ingeniería Civil,10,20,15.7,97,El Agustino,28,M
+U23220184,Miguel León,Ingeniería de Sistemas,6,18,17.7,94,Huaycán,24,M
 U23220185,Lorena Guerrero,Ingeniería Industrial,4,20,15.8,91,Santa Anita,22,F
 U23220186,Álvaro Ramos,Contabilidad,6,18,11.2,95,Santa Anita,23,M
 U23220187,Gonzalo Romero,Administración,4,16,11.8,81,El Agustino,21,M
-U23220188,Camila Díaz,Arquitectura,8,21,17.3,89,Breña,26,F
+U23220188,Camila Díaz,Arquitectura,8,21,17.3,89,La Molina,26,F
 U23220189,Luis Vega,Ingeniería Industrial,8,20,16.2,100,La Molina,25,M
 U23220190,Anthony López,Derecho,8,20,10.8,86,La Molina,25,M
 U23220191,Milagros Quispe,Marketing,7,20,15.7,100,Ate,25,F
 U23220192,Paula Quispe,Arquitectura,9,18,19.1,89,Santa Anita,27,F
-U23220193,Fiorella Gutiérrez,Administración,1,18,16.9,89,Lima,18,F
-U23220194,Gonzalo Cruz,Derecho,7,20,17.5,96,Rímac,24,M
-U23220195,Diego Ramos,Ingeniería Industrial,9,22,14.0,83,Breña,26,M
-U23220196,Diego Huamán,Administración,6,19,19.2,97,Breña,24,M
+U23220193,Fiorella Gutiérrez,Administración,1,18,16.9,89,Huaycán,18,F
+U23220194,Gonzalo Cruz,Derecho,7,20,17.5,96,Lurigancho-Chosica,24,M
+U23220195,Diego Ramos,Ingeniería Industrial,9,22,14.0,83,Santa Anita,26,M
+U23220196,Diego Huamán,Administración,6,19,19.2,97,Santa Anita,24,M
 U23220197,Milagros Alvarez,Ingeniería Industrial,5,21,13.9,100,Chaclacayo,22,F
 U23220198,Rocío Chávez,Psicología,9,19,10.7,84,El Agustino,26,F
 U23220199,Piero García,Contabilidad,4,18,11.9,84,Santa Anita,21,M
-U23220200,Harold Díaz,Administración,10,20,11.9,80,Rímac,27,M
+U23220200,Harold Díaz,Administración,10,20,11.9,80,La Molina,27,M
