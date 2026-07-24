@@ -125,22 +125,7 @@
                 <th>Beca</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>123456</td>
-                <td>Juan Perez</td>
-                <td>Ingeniería Civil</td>
-                <td>S/. 542.10</td>
-                <td>45</td>
-              </tr>
-              <tr>
-                <td>123456</td>
-                <td>Juan Perez</td>
-                <td>Ingeniería Civil</td>
-                <td>S/. 542.10</td>
-                <td>45</td>
-              </tr>
-            </tbody>
+            <tbody id="table_body"></tbody>
           </table>
         </div>
       </div>
@@ -231,9 +216,12 @@
 
             const earningsPerDistrictOptions = {
               chart: {
-          height: 350,
-          type: "area"
-        },
+                height: 350,
+                type: "area",
+                zoom: {
+                  enabled: false,
+                },
+              },
         dataLabels: {
           enabled: false
         },
@@ -245,11 +233,12 @@
         ],
         fill: {
           type: "gradient",
+          colors: ['#4318ff'],
           gradient: {
             shadeIntensity: 1,
-            opacityFrom: 0.7,
-            opacityTo: 0.9,
-            stops: [0, 90, 100]
+            opacityFrom: 0.4,
+            opacityTo: 1,
+            stops: [0, 100, 100]
           }
         },
         xaxis: {
@@ -268,7 +257,19 @@
       const earningsPerDistrictChart = new ApexCharts(document.querySelector('#earningsPerDistrictChart'), earningsPerDistrictOptions)
       earningsPerDistrictChart.render()
 
-      const resultados_postulantes = {{ resultados | tojson }};
+      const resultados_postulantes = {{ resultados | tojson }}
+
+      function renderRow({ beca,carrera, nombre, promedio, codigo }) {
+        return `<tr>
+                  <td>${codigo}</td>
+                  <td>${nombre}</td>
+                  <td>${carrera}</td>
+                  <td>${promedio}</td>
+                  <td>${beca}</td>
+                </tr>`
+      }
+
+      document.querySelector('#table_body').innerHTML = resultados_postulantes.map(renderRow).join('')
     </script>
   </body>
 </html>
