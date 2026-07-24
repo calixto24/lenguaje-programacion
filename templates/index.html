@@ -119,7 +119,7 @@
 
       <div class="card">
         <h3 class="card-title">Estudiantes</h3>
-        <div class="border border-gray-300 rounded-3xl mt-4">
+        <div class="border border-gray-300 rounded-[20px] mt-4 overflow-hidden">
           <table class="table-auto w-full">
             <thead class="bg-gray-50">
               <tr>
@@ -301,8 +301,8 @@
                         <td>${codigo}</td>
                         <td>${nombre}</td>
                         <td>${carrera}</td>
-                        <td>${promedio}</td>
-                        <td>${beca}</td>
+                        <td class="text-center">${promedio}</td>
+                        <td> <span class="text-sm p-2 border border-gray-300 rounded-full inline-flex items-center gap-2"><span class="size-3 ${beca === 'No Elegible' ? 'bg-red-500' : 'bg-green-500' } rounded-full"></span>${beca}</span></td>
                       </tr>`
             }
 
