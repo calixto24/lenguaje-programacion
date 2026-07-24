@@ -108,6 +108,11 @@
       </div>
 
       <div class="card">
+        <h3 class="card-title">Ingresos Por Distrito</h3>
+        <div id="earningsPerDistrictChart"></div>
+      </div>
+
+      <div class="card">
         <h3 class="card-title">Estudiantes</h3>
         <div class="border border-gray-300 rounded-3xl mt-4">
           <table class="table-auto w-full">
@@ -146,82 +151,123 @@
     <script>
       lucide.createIcons();
 
-      // const options = {
-      //   chart: { type: "bar", height: 350 },
-      //   series: [
-      //     {
-      //       name: "Revenue",
-      //       data: [44, 55, 57, 56, 61, 58],
-      //     },
-      //   ],
-      //   xaxis: { categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"] },
-      // };
+            // const options = {
+            //   chart: { type: "bar", height: 350 },
+            //   series: [
+            //     {
+            //       name: "Revenue",
+            //       data: [44, 55, 57, 56, 61, 58],
+            //     },
+            //   ],
+            //   xaxis: { categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"] },
+            // };
 
-      // const chart = new window.ApexCharts(
-      //   document.querySelector("#chart"),
-      //   options,
-      // );
+            // const chart = new window.ApexCharts(
+            //   document.querySelector("#chart"),
+            //   options,
+            // );
 
-      // chart.render();
+            // chart.render();
 
-      const appliedScholarshipOptions = {
-        series: {{ distribucion.series | tojson }},
+            const appliedScholarshipOptions = {
+              series: {{ distribucion.series | tojson }},
 
-        chart: {
-          type: "pie",
-          height: 300,
-        },
-
-        labels: {{ distribucion.labels | tojson }},
-        legend: {
-          show: true,
-        },
-
-        responsive: [
-          {
-            breakpoint: 480,
-            options: {
               chart: {
-                width: 320,
+                type: "pie",
+                height: 300,
               },
-            },
-          },
-        ],
-      };
 
-      const appliedScholarshipPieChart = new ApexCharts(
-        document.querySelector("#appliedScholarshipPieChart"),
-        appliedScholarshipOptions,
-      );
-      appliedScholarshipPieChart.render();
+              labels: {{ distribucion.labels | tojson }},
+              legend: {
+                show: true,
+              },
 
-      const departmentsOptions = {
-        series: [42, 23, 15, 12, 8],
-        chart: {
-          type: "pie",
-          height: 300,
-        },
-        labels: ["Organic Search", "Direct", "Social", "Referral", "Email"],
-        legend: {
-          show: true,
-        },
-        responsive: [
-          {
-            breakpoint: 480,
-            options: {
+              responsive: [
+                {
+                  breakpoint: 480,
+                  options: {
+                    chart: {
+                      width: 320,
+                    },
+                  },
+                },
+              ],
+            };
+
+            const appliedScholarshipPieChart = new ApexCharts(
+              document.querySelector("#appliedScholarshipPieChart"),
+              appliedScholarshipOptions,
+            );
+            appliedScholarshipPieChart.render();
+
+            const departmentsOptions = {
+              series: [42, 23, 15, 12, 8],
               chart: {
-                width: 320,
+                type: "pie",
+                height: 300,
               },
-            },
-          },
-        ],
-      };
+              labels: ["Organic Search", "Direct", "Social", "Referral", "Email"],
+              legend: {
+                show: true,
+              },
+              responsive: [
+                {
+                  breakpoint: 480,
+                  options: {
+                    chart: {
+                      width: 320,
+                    },
+                  },
+                },
+              ],
+            };
 
-      const departmentsPieChart = new ApexCharts(
-        document.querySelector("#departmentsPieChart"),
-        departmentsOptions,
-      );
-      departmentsPieChart.render();
+            const departmentsPieChart = new ApexCharts(
+              document.querySelector("#departmentsPieChart"),
+              departmentsOptions,
+            );
+            departmentsPieChart.render();
+
+            const earningsPerDistrictOptions = {
+              chart: {
+          height: 350,
+          type: "area"
+        },
+        dataLabels: {
+          enabled: false
+        },
+        series: [
+          {
+            name: "Series 1",
+            data: [45, 52, 38, 45, 19, 23, 2]
+          }
+        ],
+        fill: {
+          type: "gradient",
+          gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.7,
+            opacityTo: 0.9,
+            stops: [0, 90, 100]
+          }
+        },
+        xaxis: {
+          categories: [
+            "01 Jan",
+            "02 Jan",
+            "03 Jan",
+            "04 Jan",
+            "05 Jan",
+            "06 Jan",
+            "07 Jan"
+          ]
+        }
+      }
+
+      const earningsPerDistrictChart = new ApexCharts(document.querySelector('#earningsPerDistrictChart'), earningsPerDistrictOptions)
+      earningsPerDistrictChart.render()
+
+      const estudiantes = []
     </script>
   </body>
 </html>
