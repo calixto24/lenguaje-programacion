@@ -26,7 +26,7 @@
       }
       th,
       td {
-        border-bottom: 1px solid var(--muted);
+        @apply py-3 px-5 border-b border-gray-200;
       }
     </style>
   </head>
@@ -69,7 +69,9 @@
             <h3 class="text-sm font-medium text-card-foreground">
               Becas Aprobadas
             </h3>
-            <p class="text-2xl font-bold">{{ metricas.total_becas_aprobadas }}</p>
+            <p class="text-2xl font-bold">
+              {{ metricas.total_becas_aprobadas }}
+            </p>
           </div>
         </div>
 
@@ -87,7 +89,9 @@
             <h3 class="text-sm font-medium text-card-foreground">
               Ingresos promedio
             </h3>
-            <p class="text-2xl font-bold"> S/ {{ metricas.promedio_ingreso_beneficiarios }}</p>
+            <p class="text-2xl font-bold">
+              S/ {{ metricas.promedio_ingreso_beneficiarios }}
+            </p>
           </div>
         </div>
       </div>
@@ -102,38 +106,38 @@
           <div id="departmentsPieChart"></div>
         </div>
       </div>
-    </div>
 
-    <div class="card">
-      <h3 class="card-title">Estudiantes</h3>
-      <div class="border border-gray-300 rounded-3xl">
-        <table class="table-auto w-full">
-          <thead>
-            <tr>
-              <th>Codigo</th>
-              <th>Nombre</th>
-              <th>Carrera</th>
-              <th>Promedio</th>
-              <th>Beca</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>123456</td>
-              <td>Juan Perez</td>
-              <td>Ingeniería Civil</td>
-              <td>S/. 542.10</td>
-              <td>45</td>
-            </tr>
-            <tr>
-              <td>123456</td>
-              <td>Juan Perez</td>
-              <td>Ingeniería Civil</td>
-              <td>S/. 542.10</td>
-              <td>45</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="card">
+        <h3 class="card-title">Estudiantes</h3>
+        <div class="border border-gray-300 rounded-3xl mt-4">
+          <table class="table-auto w-full">
+            <thead class="bg-gray-50">
+              <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Carrera</th>
+                <th>Promedio</th>
+                <th>Beca</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>123456</td>
+                <td>Juan Perez</td>
+                <td>Ingeniería Civil</td>
+                <td>S/. 542.10</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <td>123456</td>
+                <td>Juan Perez</td>
+                <td>Ingeniería Civil</td>
+                <td>S/. 542.10</td>
+                <td>45</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
