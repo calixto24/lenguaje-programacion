@@ -22,6 +22,8 @@ async def index(request: Request):
 
     prolog = PrologService()
     prolog.cargar_expedientes(expedientes)
+
+    # Informacion de los estudiantes postulados
     resultados = prolog.obtener_resultados(expedientes)
 
     # Obtener métricas
@@ -41,8 +43,6 @@ async def index(request: Request):
         "metricas": metricas,
         "distribucion": distribucion,
         "distribucion_distritos": distribucion_distritos
-
-
     }
 
     return templates.TemplateResponse(
