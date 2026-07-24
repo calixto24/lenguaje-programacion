@@ -1,22 +1,183 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Becas y Ayudas Estudiantiles</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>{{ titulo }}</h1>
-    <p><strong>Estudiante:</strong> {{ estudiante_nombre }} </p>
-    <p><strong>Promedio:</strong> {{ promedio }} </p>
-    <p><strong>Resultado Beca:</strong> {{ porcentaje_beca }} </p>
-    <p><strong>Observacion:</strong> {{ observacion }} </p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Becas y Ayudas Estudiantiles</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-muted: var(--muted);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-primary: var(--primary);
+        --color-primary-forground: var(--primary-forground);
+        --color-secondary: var(--secondary);
+      }
+      @utility card {
+        @apply bg-card rounded-[20px] p-5;
+      }
+
+      @utility card-title {
+        @apply font-bold text-2xl;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-foreground">
+    <div class="p-5 flex flex-col gap-5">
+      <div>
+        <p class="text-muted">UTP Sede Ate - 2026-2</p>
+        <h1 class="font-bold text-2xl">Becas y Ayudas Estudiantiles</h1>
+      </div>
+      <div class="flex gap-5">
+        <div class="card flex-1 flex items-center gap-x-[18px]">
+          <div
+            class="flex justify-center items-center size-14 bg-background rounded-full"
+          >
+            <i
+              data-lucide="user"
+              class="text-primary size-8"
+              stroke-width="2.5"
+            ></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium text-card-foreground">
+              Estudiantes
+            </h3>
+            <p class="text-2xl font-bold">241</p>
+          </div>
+        </div>
+
+        <div class="card flex-1 flex items-center gap-x-[18px]">
+          <div
+            class="flex justify-center items-center size-14 bg-background rounded-full"
+          >
+            <i
+              data-lucide="check"
+              class="text-primary size-8"
+              stroke-width="2.5"
+            ></i>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium text-card-foreground">
+              Becas Aprobadas
+            </h3>
+            <p class="text-2xl font-bold">45</p>
+          </div>
+        </div>
+
+        <div class="card flex-1 flex items-center gap-x-[18px]">
+          <div
+            class="flex justify-center items-center size-14 bg-background rounded-full"
+          >
+            <i
+              data-lucide="dollar-sign"
+              class="text-primary size-8"
+              stroke-width="2.5"
+            ></i>
+          </div>
+          <div> `
+            <h3 class="text-sm font-medium text-card-foreground">
+              Ingresos promedio
+            </h3>
+            <p class="text-2xl font-bold">S/. 542.10</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-5 w-full">
+        <div class="card flex-1">
+          <h3 class="card-title">Titulo</h3>
+          <div id="appliedScholarshipPieChart"></div>
+        </div>
+        <div class="card flex-1">
+          <h3 class="card-title">Titulo</h3>
+          <div id="departmentsPieChart"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+      lucide.createIcons();
+
+      // const options = {
+      //   chart: { type: "bar", height: 350 },
+      //   series: [
+      //     {
+      //       name: "Revenue",
+      //       data: [44, 55, 57, 56, 61, 58],
+      //     },
+      //   ],
+      //   xaxis: { categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"] },
+      // };
+
+      // const chart = new window.ApexCharts(
+      //   document.querySelector("#chart"),
+      //   options,
+      // );
+
+      // chart.render();
+
+      const appliedScholarshipOptions = {
+        series: [42, 23, 15, 12, 8],
+        chart: {
+          type: "pie",
+          height: 300,
+        },
+        labels: ["Organic Search", "Direct", "Social", "Referral", "Email"],
+        legend: {
+          show: true,
+        },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 320,
+              },
+            },
+          },
+        ],
+      };
+
+      const appliedScholarshipPieChart = new ApexCharts(
+        document.querySelector("#appliedScholarshipPieChart"),
+        appliedScholarshipOptions,
+      );
+      appliedScholarshipPieChart.render();
+
+      const departmentsOptions = {
+        series: [42, 23, 15, 12, 8],
+        chart: {
+          type: "pie",
+          height: 300,
+        },
+        labels: ["Organic Search", "Direct", "Social", "Referral", "Email"],
+        legend: {
+          show: true,
+        },
+        responsive: [
+          {
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 320,
+              },
+            },
+          },
+        ],
+      };
+
+      const departmentsPieChart = new ApexCharts(
+        document.querySelector("#departmentsPieChart"),
+        departmentsOptions,
+      );
+      departmentsPieChart.render();
+    </script>
+  </body>
 </html>

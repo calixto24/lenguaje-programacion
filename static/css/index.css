@@ -1,0 +1,17 @@
+@import "./fonts.css";
+
+:root {
+  --background: #f4f7fe;
+  --foreground: #2b3674;
+  --muted: #707eae;
+  --card: #ffffff;
+  --card-foreground: #a3aed0;
+  --primary: #4318ff;
+  --primary-forground: #4318ff;
+  --secondary: #84d9fd;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: -2%;
+}
