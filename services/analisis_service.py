@@ -110,3 +110,29 @@ class AnalisisService:
             "categorias": categorias,
             "series": datos
         }
+
+    @staticmethod
+    def obtener_perfil_postulantes(
+        expedientes: list[Expediente]
+    ) -> dict:
+
+        categorias = [
+            "Trabajan",
+            "Viven solos",
+            "Discapacidad",
+            "Orfandad",
+            "Familia numerosa"
+        ]
+
+        valores = [
+            int(np.sum([e.trabaja for e in expedientes])),
+            int(np.sum([e.vive_solo for e in expedientes])),
+            int(np.sum([e.discapacidad for e in expedientes])),
+            int(np.sum([e.orfandad for e in expedientes])),
+            int(np.sum([e.dependientes >= 4 for e in expedientes]))
+        ]
+
+        return {
+            "categorias": categorias,
+            "series": valores
+        }
