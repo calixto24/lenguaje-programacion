@@ -37,12 +37,16 @@ async def index(request: Request):
     # Obtener distribucion por distrito
     distribucion_distritos = AnalisisService.obtener_distribucion_por_distrito(expedientes, resultados)
 
+    # Obtener estadistica ingreso por distrito
+    ingresos_distrito = AnalisisService.obtener_ingreso_promedio_por_distrito(expedientes)
+
     contexto = {
         "titulo": "Evaluación del Sistema Experto de Becas",
         "resultados": resultados,
         "metricas": metricas,
         "distribucion": distribucion,
-        "distribucion_distritos": distribucion_distritos
+        "distribucion_distritos": distribucion_distritos,
+        "ingresos_distrito": ingresos_distrito
     }
 
     return templates.TemplateResponse(

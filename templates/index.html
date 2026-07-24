@@ -240,7 +240,7 @@
         series: [
           {
             name: "Ingresos",
-            data: [45, 52, 38, 45, 19, 23, 2]
+            data: {{ ingresos_distrito.series | tojson }}
           }
         ],
         fill: {
@@ -253,15 +253,7 @@
           }
         },
         xaxis: {
-          categories: [
-            "01 Jan",
-            "02 Jan",
-            "03 Jan",
-            "04 Jan",
-            "05 Jan",
-            "06 Jan",
-            "07 Jan"
-          ]
+          categories: {{ ingresos_distrito.categorias | tojson }}
         }
       }
 

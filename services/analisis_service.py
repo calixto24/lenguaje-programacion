@@ -50,22 +50,11 @@ class AnalisisService:
 
     @staticmethod
     def obtener_distribucion_por_distrito(
-        expedientes: list[Expediente],
-        resultados_prolog: list[dict]
+        expedientes: list[Expediente]
     ) -> dict:
-
-        beca_map = {
-            r["codigo"]: r["beca"]
-            for r in resultados_prolog
-        }
 
         distritos = np.array([
             exp.distrito.title().strip()
-            for exp in expedientes
-        ])
-
-        beneficiarios = np.array([
-            beca_map.get(exp.codigo, "No Elegible") != "No Elegible"
             for exp in expedientes
         ])
 
@@ -76,16 +65,48 @@ class AnalisisService:
 
         for distrito in distritos_unicos:
 
-            total = np.sum(distritos == distrito)
-
-            aprobados = np.sum(
-                (distritos == distrito) & beneficiarios
+            total = int(
+                np.sum(distritos == distrito)
             )
 
             labels.append(distrito)
-            series.append(int(aprobados))
+            series.append(total)
 
         return {
             "labels": labels,
             "series": series
+        }
+
+    @staticmethod
+    def obtener_ingreso_promedio_por_distrito(
+        expedientes: list[Expediente]
+    ) -> dict:
+
+        distritos = np.array([
+            exp.distrito.title().strip()
+            for exp in expedientes
+        ])
+
+        ingresos = np.array([
+            exp.ingreso_familiar
+            for exp in expedientes
+        ])
+
+        distritos_unicos = np.unique(distritos)
+
+        categorias = []
+        datos = []
+
+        for distrito in distritos_unicos:
+
+            promedio = np.mean(
+                ingresos[distritos == distrito]
+            )
+
+            categorias.append(distrito)
+            datos.append(round(float(promedio), 2))
+
+        return {
+            "categorias": categorias,
+            "series": datos
         }
