@@ -65,7 +65,7 @@
             <h3 class="text-sm font-medium text-card-foreground">
               Becas Aprobadas
             </h3>
-            <p class="text-2xl font-bold">45</p>
+            <p class="text-2xl font-bold">{{ metricas.total_becas_aprobadas }}</p>
           </div>
         </div>
 
@@ -83,18 +83,18 @@
             <h3 class="text-sm font-medium text-card-foreground">
               Ingresos promedio
             </h3>
-            <p class="text-2xl font-bold">S/. 542.10</p>
+            <p class="text-2xl font-bold"> S/ {{ metricas.promedio_ingreso_beneficiarios }}</p>
           </div>
         </div>
       </div>
 
       <div class="flex gap-5 w-full">
         <div class="card flex-1">
-          <h3 class="card-title">Titulo</h3>
+          <h3 class="card-title">Becas aplicadas</h3>
           <div id="appliedScholarshipPieChart"></div>
         </div>
         <div class="card flex-1">
-          <h3 class="card-title">Titulo</h3>
+          <h3 class="card-title">Departamentos</h3>
           <div id="departmentsPieChart"></div>
         </div>
       </div>
