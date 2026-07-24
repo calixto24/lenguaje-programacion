@@ -40,13 +40,17 @@ async def index(request: Request):
     # Obtener estadistica ingreso por distrito
     ingresos_distrito = AnalisisService.obtener_ingreso_promedio_por_distrito(expedientes)
 
+    # Obtener perfil socio socioeconómico
+    perfil_postulantes = AnalisisService.obtener_perfil_postulantes(expedientes)
+
     contexto = {
         "titulo": "Evaluación del Sistema Experto de Becas",
         "resultados": resultados,
         "metricas": metricas,
         "distribucion": distribucion,
         "distribucion_distritos": distribucion_distritos,
-        "ingresos_distrito": ingresos_distrito
+        "ingresos_distrito": ingresos_distrito,
+        "perfil_postulantes": perfil_postulantes
     }
 
     return templates.TemplateResponse(
