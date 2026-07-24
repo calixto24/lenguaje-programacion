@@ -1,5 +1,6 @@
 import numpy as np
 from models.expediente import Expediente
+from models.estudiante import Estudiante
 from services.funcional_service import FuncionalService
 
 class AnalisisService:
