@@ -5,7 +5,7 @@ from services.funcional_service import FuncionalService
 class AnalisisService:
 
     @staticmethod
-    def calcular_metricas_generales(expedientes: list[Expediente], resultados_prolog: list[dict]) -> dict:
+    def calcular_metricas_generales(estudiantes: list[Estudiante], expedientes: list[Expediente], resultados_prolog: list[dict]) -> dict:
         # Asociación de cada expediente con el resultado obtenido en Prolog
         beca_map = {r["codigo"]: r["beca"] for r in resultados_prolog}
         expedientes_con_beca = [(exp, beca_map.get(exp.codigo, "No Elegible")) for exp in expedientes]
@@ -21,6 +21,7 @@ class AnalisisService:
         ) if beneficiarios else np.array([0.0])
 
         return {
+            "total_bd": len(estudiantes),
             "total_estudiantes": len(expedientes),
             "total_becas_aprobadas": len(beneficiarios),
             "tasa_aprobacion_pct": round((len(beneficiarios) / len(expedientes)) * 100, 2) if expedientes else 0.0,
