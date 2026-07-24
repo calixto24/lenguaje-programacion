@@ -1,4 +1,5 @@
 import numpy as np
+import re
 from models.expediente import Expediente
 from models.estudiante import Estudiante
 from services.funcional_service import FuncionalService
@@ -36,7 +37,16 @@ class AnalisisService:
     @staticmethod
     def obtener_distribucion_becas(resultados_prolog):
 
-        tipos = [r["beca"] for r in resultados_prolog]
+        tipos = []
+
+        for resultado in resultados_prolog:
+
+            nombre = resultado["beca"]
+
+            nombre = re.sub(r"^Beca\s+", "", nombre)
+            nombre = re.sub(r"\s*\(\d+%\)", "", nombre)
+
+            tipos.append(nombre)
 
         labels, valores = np.unique(
             tipos,
