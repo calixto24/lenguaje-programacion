@@ -20,3 +20,4 @@ depues de instalar una dependencia
 ```bash
 pip freeze > requirements.txt
 ```
+ss
