@@ -24,6 +24,9 @@
       @utility card-title {
         @apply font-bold text-2xl mb-4;
       }
+      @utility btn-icon {
+        @apply flex justify-center items-center size-8 border border-gray-300 rounded-md;
+      }
       th,
       td {
         @apply py-3 px-5 border-b border-gray-200;
@@ -134,13 +137,13 @@
           </table>
         </div>
 
-        <div class="flex justify-end">
-          Pagina 1 de 4
-          <button>
-            <i data-lucide="chevron-left" class="text-primary size-8"></i>
+        <div class="flex justify-end gap-2 mt-4 items-center">
+          Página 1 de 4
+          <button class="btn-icon">
+            <i data-lucide="chevron-left" class="text-black size-4"></i>
           </button>
-          <button>
-            <i data-lucide="chevron-right" class="text-primary size-8"></i>
+          <button class="btn-icon">
+            <i data-lucide="chevron-right" class="text-black size-4"></i>
           </button>
         </div>
       </div>
