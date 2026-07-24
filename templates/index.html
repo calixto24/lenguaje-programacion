@@ -113,6 +113,11 @@
       </div>
 
       <div class="card">
+        <h3 class="card-title">Cateogoria de Estudiantes</h3>
+        <div id="StudentsCategoryChart"></div>
+      </div>
+
+      <div class="card">
         <h3 class="card-title">Estudiantes</h3>
         <div class="border border-gray-300 rounded-3xl mt-4">
           <table class="table-auto w-full">
@@ -134,39 +139,68 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script>
-      lucide.createIcons();
+            lucide.createIcons();
 
-            // const options = {
-            //   chart: { type: "bar", height: 350 },
-            //   series: [
-            //     {
-            //       name: "Revenue",
-            //       data: [44, 55, 57, 56, 61, 58],
-            //     },
-            //   ],
-            //   xaxis: { categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"] },
-            // };
+                  // const options = {
+                  //   chart: { type: "bar", height: 350 },
+                  //   series: [
+                  //     {
+                  //       name: "Revenue",
+                  //       data: [44, 55, 57, 56, 61, 58],
+                  //     },
+                  //   ],
+                  //   xaxis: { categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"] },
+                  // };
 
-            // const chart = new window.ApexCharts(
-            //   document.querySelector("#chart"),
-            //   options,
-            // );
+                  // const chart = new window.ApexCharts(
+                  //   document.querySelector("#chart"),
+                  //   options,
+                  // );
 
-            // chart.render();
+                  // chart.render();
 
-            const appliedScholarshipOptions = {
-              series: {{ distribucion.series | tojson }},
+                  const appliedScholarshipOptions = {
+                    series: {{ distribucion.series | tojson }},
 
+                    chart: {
+                      type: "pie",
+                      height: 300,
+                    },
+
+                    labels: {{ distribucion.labels | tojson }},
+                    legend: {
+                      show: true,
+                    },
+
+                    responsive: [
+                      {
+                        breakpoint: 480,
+                        options: {
+                          chart: {
+                            width: 320,
+                          },
+                        },
+                      },
+                    ],
+                  };
+
+                  const appliedScholarshipPieChart = new ApexCharts(
+                    document.querySelector("#appliedScholarshipPieChart"),
+                    appliedScholarshipOptions,
+                  );
+                  appliedScholarshipPieChart.render();
+
+
+            const departmentsOptions = {
+              series: {{ distribucion_distritos.series | tojson }},
               chart: {
                 type: "pie",
                 height: 300,
               },
-
-              labels: {{ distribucion.labels | tojson }},
+              labels: {{ distribucion_distritos.labels | tojson }},
               legend: {
                 show: true,
               },
-
               responsive: [
                 {
                   breakpoint: 480,
@@ -179,89 +213,100 @@
               ],
             };
 
-            const appliedScholarshipPieChart = new ApexCharts(
-              document.querySelector("#appliedScholarshipPieChart"),
-              appliedScholarshipOptions,
-            );
-            appliedScholarshipPieChart.render();
+                  const departmentsPieChart = new ApexCharts(
+                    document.querySelector("#departmentsPieChart"),
+                    departmentsOptions,
+                  );
+                  departmentsPieChart.render();
 
-
-      const departmentsOptions = {
-        series: {{ distribucion_distritos.series | tojson }},
-        chart: {
-          type: "pie",
-          height: 300,
-        },
-        labels: {{ distribucion_distritos.labels | tojson }},
-        legend: {
-          show: true,
-        },
-        responsive: [
-          {
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 320,
+                  const earningsPerDistrictOptions = {
+                    chart: {
+                      height: 350,
+                      type: "area",
+                      zoom: {
+                        enabled: false,
+                      },
+                    },
+              dataLabels: {
+                enabled: false
               },
-            },
-          },
-        ],
-      };
-
-            const departmentsPieChart = new ApexCharts(
-              document.querySelector("#departmentsPieChart"),
-              departmentsOptions,
-            );
-            departmentsPieChart.render();
-
-            const earningsPerDistrictOptions = {
-              chart: {
-                height: 350,
-                type: "area",
-                zoom: {
-                  enabled: false,
-                },
+              series: [
+                {
+                  name: "Ingresos",
+                  data: {{ ingresos_distrito.series | tojson }}
+                }
+              ],
+              fill: {
+                type: "gradient",
+                colors: ['#4318ff'],
+                gradient: {
+                  shadeIntensity: 1,
+                  opacityFrom: 0.4,
+                  opacityTo: 1,
+                  stops: [0, 100, 100]
+                }
               },
-        dataLabels: {
-          enabled: false
-        },
+              xaxis: {
+                categories: {{ ingresos_distrito.categorias | tojson }}
+              }
+            }
+
+            const earningsPerDistrictChart = new ApexCharts(document.querySelector('#earningsPerDistrictChart'), earningsPerDistrictOptions)
+            earningsPerDistrictChart.render()
+
+            const StudentsCategoryOptions = {
         series: [
           {
-            name: "Ingresos",
-            data: {{ ingresos_distrito.series | tojson }}
-          }
+            name: 'Cantidad',
+            data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
+          },
         ],
-        fill: {
-          type: "gradient",
-          colors: ['#4318ff'],
-          gradient: {
-            shadeIntensity: 1,
-            opacityFrom: 0.4,
-            opacityTo: 1,
-            stops: [0, 100, 100]
-          }
+        chart: {
+          type: 'bar',
+          height: 350,
+        },
+        plotOptions: {
+          bar: {
+            borderRadius: 4,
+            borderRadiusApplication: 'end',
+            horizontal: true,
+          },
+        },
+        dataLabels: {
+          enabled: false,
         },
         xaxis: {
-          categories: {{ ingresos_distrito.categorias | tojson }}
-        }
+          categories: [
+            'South Korea',
+            'Canada',
+            'United Kingdom',
+            'Netherlands',
+            'Italy',
+            'France',
+            'Japan',
+            'United States',
+            'China',
+            'Germany',
+          ],
+        },
       }
 
-      const earningsPerDistrictChart = new ApexCharts(document.querySelector('#earningsPerDistrictChart'), earningsPerDistrictOptions)
-      earningsPerDistrictChart.render()
+      var StudentsCategoryChart = new ApexCharts(document.querySelector('#StudentsCategoryChart'), StudentsCategoryOptions)
+      StudentsCategoryChart.render()
 
-      const resultados_postulantes = {{ resultados | tojson }}
+            const resultados_postulantes = {{ resultados | tojson }}
 
-      function renderRow({ beca,carrera, nombre, promedio, codigo }) {
-        return `<tr>
-                  <td>${codigo}</td>
-                  <td>${nombre}</td>
-                  <td>${carrera}</td>
-                  <td>${promedio}</td>
-                  <td>${beca}</td>
-                </tr>`
-      }
+            function renderRow({ beca,carrera, nombre, promedio, codigo }) {
+              return `<tr>
+                        <td>${codigo}</td>
+                        <td>${nombre}</td>
+                        <td>${carrera}</td>
+                        <td>${promedio}</td>
+                        <td>${beca}</td>
+                      </tr>`
+            }
 
-      document.querySelector('#table_body').innerHTML = resultados_postulantes.map(renderRow).join('')
+            document.querySelector('#table_body').innerHTML = resultados_postulantes.map(renderRow).join('')
     </script>
   </body>
 </html>

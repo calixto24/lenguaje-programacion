@@ -35,7 +35,7 @@ async def index(request: Request):
     distribucion = AnalisisService.obtener_distribucion_becas(resultados)
 
     # Obtener distribucion por distrito
-    distribucion_distritos = AnalisisService.obtener_distribucion_por_distrito(expedientes, resultados)
+    distribucion_distritos = AnalisisService.obtener_distribucion_por_distrito(expedientes)
 
     # Obtener estadistica ingreso por distrito
     ingresos_distrito = AnalisisService.obtener_ingreso_promedio_por_distrito(expedientes)
