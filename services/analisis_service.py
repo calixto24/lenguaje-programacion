@@ -48,24 +48,43 @@ class AnalisisService:
         }
 
     @staticmethod
-    def obtener_distribucion_por_distrito(expedientes: list[Expediente], resultados_prolog: list[dict]) -> dict:
-        beca_map = {r["codigo"]: r["beca"] for r in resultados_prolog}
-        
-        distritos = np.array([exp.distrito.title().strip() for exp in expedientes])
-        es_beneficiario = np.array([beca_map.get(exp.codigo, "No Elegible") != "No Elegible" for exp in expedientes])
+    def obtener_distribucion_por_distrito(
+        expedientes: list[Expediente],
+        resultados_prolog: list[dict]
+    ) -> dict:
+
+        beca_map = {
+            r["codigo"]: r["beca"]
+            for r in resultados_prolog
+        }
+
+        distritos = np.array([
+            exp.distrito.title().strip()
+            for exp in expedientes
+        ])
+
+        beneficiarios = np.array([
+            beca_map.get(exp.codigo, "No Elegible") != "No Elegible"
+            for exp in expedientes
+        ])
 
         distritos_unicos = np.unique(distritos)
-        reporte_distritos = {}
 
-        for dist in distritos_unicos:
-            mask = (distritos == dist)
-            total_postulantes = int(np.sum(mask))
-            aprobados = int(np.sum(mask & es_beneficiario))
-            
-            reporte_distritos[dist] = {
-                "postulantes": total_postulantes,
-                "aprobados": aprobados,
-                "tasa_efectividad_pct": round((aprobados / total_postulantes) * 100, 1)
-            }
+        labels = []
+        series = []
 
-        return reporte_distritos
+        for distrito in distritos_unicos:
+
+            total = np.sum(distritos == distrito)
+
+            aprobados = np.sum(
+                (distritos == distrito) & beneficiarios
+            )
+
+            labels.append(distrito)
+            series.append(int(aprobados))
+
+        return {
+            "labels": labels,
+            "series": series
+        }

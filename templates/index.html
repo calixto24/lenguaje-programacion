@@ -94,7 +94,7 @@
           <div id="appliedScholarshipPieChart"></div>
         </div>
         <div class="card flex-1">
-          <h3 class="card-title">Departamentos</h3>
+          <h3 class="card-title">Distritos</h3>
           <div id="departmentsPieChart"></div>
         </div>
       </div>
@@ -155,12 +155,12 @@
       appliedScholarshipPieChart.render();
 
       const departmentsOptions = {
-        series: [42, 23, 15, 12, 8],
+        series: {{ distribucion_distritos.series | tojson }},
         chart: {
           type: "pie",
           height: 300,
         },
-        labels: ["Organic Search", "Direct", "Social", "Referral", "Email"],
+        labels: {{ distribucion_distritos.labels | tojson }},
         legend: {
           show: true,
         },

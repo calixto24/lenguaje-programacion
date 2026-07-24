@@ -32,11 +32,16 @@ async def index(request: Request):
     # Obtener distribucion de becas
     distribucion = AnalisisService.obtener_distribucion_becas(resultados)
 
+    # Obtener distribucion por distrito
+    distribucion_distritos = AnalisisService.obtener_distribucion_por_distrito(expedientes, resultados)
+
     contexto = {
         "titulo": "Evaluación del Sistema Experto de Becas",
         "resultados": resultados,
         "metricas": metricas,
-        "distribucion": distribucion
+        "distribucion": distribucion,
+        "distribucion_distritos": distribucion_distritos
+
 
     }
 
