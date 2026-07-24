@@ -26,7 +26,7 @@ async def index(request: Request):
 
     # Obtener métricas
     metricas = AnalisisService.calcular_metricas_generales(
-        expedientes, resultados
+        estudiantes, expedientes, resultados
     )
 
     contexto = {
