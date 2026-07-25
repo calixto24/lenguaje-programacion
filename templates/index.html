@@ -25,7 +25,7 @@
         @apply font-bold text-2xl mb-4;
       }
       @utility btn-icon {
-        @apply flex justify-center items-center size-8 border border-gray-300 rounded-md;
+        @apply flex justify-center items-center size-8 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-50;
       }
       th,
       td {
@@ -138,11 +138,12 @@
         </div>
 
         <div class="flex justify-end gap-2 mt-4 items-center">
-          Página 1 de 4
-          <button class="btn-icon">
+          Página <span id="currentPage"></span> de
+          <span id="totalPages"></span>
+          <button class="btn-icon" id="prevPage">
             <i data-lucide="chevron-left" class="text-black size-4"></i>
           </button>
-          <button class="btn-icon">
+          <button class="btn-icon" id="nextPage">
             <i data-lucide="chevron-right" class="text-black size-4"></i>
           </button>
         </div>
@@ -298,7 +299,6 @@
       StudentsCategoryChart.render()
 
             const resultados_postulantes = {{ resultados | tojson }}
-
             function renderRow({ beca,carrera, nombre, promedio, codigo }) {
               return `<tr>
                         <td>${codigo}</td>
@@ -309,7 +309,33 @@
                       </tr>`
             }
 
-            document.querySelector('#table_body').innerHTML = resultados_postulantes.map(renderRow).join('')
+            const itemsPerPage = 5
+            let currentPage = 1
+            const totalPages = Math.ceil(resultados_postulantes.length / itemsPerPage)
+
+            document.querySelector('#table_body').innerHTML = getEstudiantesFiltrados().map(renderRow).join('')
+            document.querySelector('#currentPage').innerHTML = currentPage
+            document.querySelector('#totalPages').innerHTML = totalPages
+
+            document.querySelector('#prevPage').addEventListener('click', () => {
+              if (currentPage > 1) {
+                currentPage--
+                document.querySelector('#table_body').innerHTML = getEstudiantesFiltrados().map(renderRow).join('')
+                document.querySelector('#currentPage').innerHTML = currentPage
+              }
+            })
+
+            document.querySelector('#nextPage').addEventListener('click', () => {
+              if (currentPage < totalPages) {
+                currentPage++
+                document.querySelector('#table_body').innerHTML = getEstudiantesFiltrados().map(renderRow).join('')
+                document.querySelector('#currentPage').innerHTML = currentPage
+              }
+            })
+
+        function getEstudiantesFiltrados() {
+          return resultados_postulantes.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+        }
     </script>
   </body>
 </html>

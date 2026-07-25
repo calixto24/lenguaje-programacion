@@ -14,7 +14,6 @@ class Estudiante:
     sexo: str
 
     def to_dict(self):
-
         return {
             "codigo": self.codigo,
             "nombre": self.nombre,

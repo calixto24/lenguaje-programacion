@@ -54,9 +54,8 @@ class LectorCSV:
             )
 
     @staticmethod
-    def leer_estudiantes(
-            ruta_csv: str
-    ) -> list[Estudiante]:
+    def leer_estudiantes(ruta_csv: str
+) -> list[Estudiante]:
         ruta = Path(ruta_csv)
 
         if not ruta.exists():

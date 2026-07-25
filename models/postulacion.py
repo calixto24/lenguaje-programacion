@@ -13,7 +13,6 @@ class Postulacion:
     recibe_otra_beca: bool
 
     def to_dict(self):
-
         return {
             "codigo": self.codigo,
             "ingreso_familiar": self.ingreso_familiar,
